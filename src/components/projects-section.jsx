@@ -15,21 +15,21 @@ const projects = [
         description:
             'CRM BSmart — это современная CRM-система, разработанная для эффективного управления процессами покупки и продажи. Она обеспечивает полный контроль над сделками, позволяет вести учет клиентов и товаров, а также поддерживает интеграцию с ГНС для быстрой и безопасной авторизации операций.',
         technologies: ['React', 'React-query', 'Antd', 'React-router', 'Chart.js', 'Docker', 'Nginx', 'FSD', 'TypeScript', 'i18next'],
-        image: '/bsmart.webp',
+        image: import.meta.env.BASE_URL + '/bsmart.webp',
         link: 'https://apps.bsmart.kg',
     },
     {
         title: 'Лендинг сайт BSmart',
         description: 'Главная страница компании BSmart.',
         technologies: ['Next.js'],
-        image: '/bsmart_site.webp',
+        image:  import.meta.env.BASE_URL + '/bsmart_site.webp',
         link: 'https://bsmart.kg/',
     },
     {
         title: 'UBR',
         description: 'UBR — специализированная система для продажи и управления электронными цифровыми подписями (ЭЦП).',
         technologies: ['Next.js', 'React', 'Axios', 'React-query', 'Redux', 'TypeScript'],
-        image: '/ubr.webp',
+        image:  import.meta.env.BASE_URL + '/ubr.webp',
         link: 'https://ubr.kg/p',
     },
     {
@@ -37,21 +37,21 @@ const projects = [
         description:
             'Locali — это универсальное решение, сочетающее в себе агрегатор доставки еды для пользователей и CRM-систему для управления процессами ресторанов, кафе и служб доставки. Платформа автоматизирует прием заказов, отслеживание доставок, управление меню и коммуникацию с клиентами.',
         technologies: ['React', 'React-query', 'Tailwindcss', 'Redux', 'React-leaflet', 'TypeScript'],
-        image: '/locali.webp',
+        image:  import.meta.env.BASE_URL + '/locali.webp',
         link: 'https://loca-li.com/',
     },
     {
         title: 'Локали - Доставка еды',
         description: 'Мобильное приложение Локали - Доставка еды для Android и IOS',
         technologies: ['React-native', 'TypeScript'],
-        image: '/locali_app.webp',
+        image:  import.meta.env.BASE_URL + '/locali_app.webp',
         link: 'https://apps.apple.com/kg/app/%D0%BB%D0%BE%D0%BA%D0%B0%D0%BB%D0%B8-%D0%B4%D0%BE%D1%81%D1%82%D0%B0%D0%B2%D0%BA%D0%B0-%D0%B5%D0%B4%D1%8B/id1625790808',
     },
     {
         title: 'Сайт G&GApp',
         description: 'G&GGApp - главный сайт компании G&GTeam.',
         technologies: ['Vanilla js'],
-        image: '/ggapp.webp',
+        image:  import.meta.env.BASE_URL + '/ggapp.webp',
         link: 'https://ggapp.pro/',
     },
     {
@@ -59,28 +59,28 @@ const projects = [
         description:
             'BeEasy- это программное решение, предназначенное для удобного взаимодействия с сотрудниками, заказчиком и эффективного сотрудничества. Мы предоставляем широкий набор инструментов, включая возможность проведения проектирования на заданную проектную среду, группы, функции управления задачами, аналитику и управление проектами, а также связь в режиме реального времени.',
         technologies: ['React', 'Redux', 'React-router', 'Nodejs', 'Express.js', 'Nginx', 'Postgresql', 'Emotion', 'TypeScript'],
-        image: '/beeasy.webp',
+        image: import.meta.env.BASE_URL +  '/beeasy.webp',
         link: '/https://beeasy.kg/',
     },
     {
         title: 'Сайт AVN',
         description: 'Главный сайт компании AVN.',
         technologies: ['React', 'Redux', 'Nodejs'],
-        image: '/avn.webp',
+        image:  import.meta.env.BASE_URL + '/avn.webp',
         link: 'https://avn.kg/',
     },
     {
         title: 'битуриент Online',
         description: 'Портал для приема в вузы Кыргызской Республики граждан зарубежных стран.',
         technologies: ['React', 'Redux', 'Nodejs', 'Express.js', 'Postgresql'],
-        image: '/applicant.webp',
+        image:  import.meta.env.BASE_URL + '/applicant.webp',
         link: 'https://edugate.edu.gov.kg/',
     },
     {
         title: 'Umut',
         description: 'Система Umut',
         technologies: ['React', 'React-router-dom'],
-        image: '/umut.webp',
+        image: import.meta.env.BASE_URL +  '/umut.webp',
         link: 'https://umut.edu.gov.kg/',
     },
 ]
@@ -96,8 +96,7 @@ export const ProjectsSection = () => {
 
                 <div
                     className='grid grid-cols-1 sm:grid-cols-2 gap-6 overflow-hidden pt-2'
-                    style={{ maxHeight: isMoreShow ? '100%' : '1000px' }}
-                >
+                    style={{ maxHeight: isMoreShow ? '100%' : '1000px' }}>
                     {projects.map((project, index) => (
                         // <div key={index} className={`scroll-animation delay-${(index + 1) * 100}`}>
                         <ProjectCard {...project} key={index} />
@@ -107,8 +106,7 @@ export const ProjectsSection = () => {
 
                 <button
                     onClick={() => setIsMoreShow(!isMoreShow)}
-                    className='group relative px-4 py-2 rounded-md overflow-hidden m-auto block border-2 cursor-pointer mt-6'
-                >
+                    className='group relative px-4 py-2 rounded-md overflow-hidden m-auto block border-2 cursor-pointer mt-6'>
                     <span className='absolute inset-0 w-full h-full bg-[#04C8C8]/10 group-hover:bg-[#04C8C8]/20 transition-all duration-300'></span>
                     <span className='absolute inset-0 w-0 bg-[#04C8C8]/20 group-hover:w-full transition-all duration-700'></span>
                     <span className='relative text-white'>{isMoreShow ? 'Скрыть' : 'Показать еще'}</span>
