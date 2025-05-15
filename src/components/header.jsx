@@ -12,7 +12,7 @@ const renderStars = () => {
     return stars
 }
 
-export const Header = ({ menuOpen }) => {
+export const Header = ({ menuOpen, setMenuOpen }) => {
     return (
         <>
             {renderStars()}

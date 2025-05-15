@@ -198,7 +198,7 @@ const App = () => {
 
     return (
         <div className='bg-[#000000] text-white min-h-screen animated-bg'>
-            <Header menuOpen={menuOpen} />
+            <Header menuOpen={menuOpen} setMenuOpen={setMenuOpen} />
 
             <VerticalStepper activeSection={activeSection} />
             <MobileMenu menuOpen={menuOpen} setMenuOpen={setMenuOpen} />
