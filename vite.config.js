@@ -6,16 +6,17 @@ import svgr from 'vite-plugin-svgr'
 
 // https://vite.dev/config/
 export default defineConfig({
-  plugins: [react(), tailwindcss(), svgr()],
-  server: {
-    port: 3000,
-    open: true,
-    host: true,
-  },
-  resolve: {
-    alias: {
-      '@': path.resolve(__dirname, './src'),
-    }
-  },
-  assetsInclude: ['**/*.svg'],
+    plugins: [react(), tailwindcss(), svgr()],
+    base: '/dasidragon',
+    server: {
+        port: 3000,
+        open: true,
+        host: true,
+    },
+    resolve: {
+        alias: {
+            '@': path.resolve(__dirname, './src'),
+        },
+    },
+    assetsInclude: ['**/*.svg'],
 })
