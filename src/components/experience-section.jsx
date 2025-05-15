@@ -76,7 +76,7 @@ export const ExperienceSection = () => {
                                 {exp.company === 'BI Innovations' && (
                                     <div className='w-10 h-10 rounded-full bg-[#57b8ff]/20 flex items-center justify-center z-10 shadow-glow'>
                                         <svg
-                                            className='h-5 w-5 text-[#57b8ff]'
+                                            className='h-5 w-5 text-[#3C50E0]'
                                             fill='currentColor'
                                             viewBox='0 0 24 24'
                                             xmlns='http://www.w3.org/2000/svg'
@@ -100,7 +100,7 @@ export const ExperienceSection = () => {
                                 {exp.company === 'BSmart' && (
                                     <div className='w-10 h-10 rounded-full bg-[#57b8ff]/20 flex items-center justify-center z-10 shadow-glow'>
                                         <svg
-                                            className='h-5 w-5 text-[#57b8ff]'
+                                            className='h-5 w-5 text-[#3C50E0]'
                                             fill='currentColor'
                                             viewBox='0 0 24 24'
                                             xmlns='http://www.w3.org/2000/svg'

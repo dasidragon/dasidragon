@@ -28,7 +28,7 @@ export const Header = ({ menuOpen, setMenuOpen }) => {
                 <a
                     href={import.meta.env.BASE_URL + '/Дастан_Нурбеков_Frontend_developer.pdf'}
                     target='_blank'
-                    className='flex items-center gap-2 bg-[#57b8ff] text-white px-3 py-1.5 rounded-md hover:bg-[#57b8ff]/80 transition-colors shadow-lg'
+                    className='flex items-center gap-2 bg-[#3C50E0] text-white px-3 py-1.5 rounded-md hover:bg-[#3C50E0]/80 transition-colors shadow-lg'
                     download>
                     <svg className='w-4 h-4' fill='none' stroke='currentColor' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'>
                         <path
