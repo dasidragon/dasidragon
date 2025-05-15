@@ -1,0 +1,446 @@
+@import 'tailwindcss';
+
+:root {
+    --cursor-dark-bg: #1e1f22;
+    --cursor-darker-bg: #171819;
+    --cursor-text: #ffffff;
+    --cursor-primary: #57b8ff;
+    --cursor-secondary: #3c50e0;
+    --cursor-accent: #04c8c8;
+    --cursor-border: #323232;
+    --cursor-card-bg: rgba(39, 40, 44, 0.8);
+    --nav-height: 80px;
+    --header-height: 60px; /* Высота фиксированной шапки */
+}
+
+html {
+    scroll-behavior: smooth;
+    font-family:
+        'Inter',
+        system-ui,
+        -apple-system,
+        sans-serif;
+    scroll-padding-top: var(--header-height);
+}
+
+body {
+    font-family:
+        'Inter',
+        system-ui,
+        -apple-system,
+        sans-serif;
+    background-color: var(--cursor-dark-bg);
+    color: var(--cursor-text);
+    min-height: 100vh;
+    margin: 0;
+    letter-spacing: 0.01em;
+    line-height: 1.6;
+    position: relative;
+    overflow-x: hidden;
+}
+
+/* Анимация фона */
+.animated-bg {
+    position: relative;
+    overflow: hidden;
+}
+
+.animated-bg::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background:
+        radial-gradient(circle at 15% 15%, rgba(87, 184, 255, 0.08), rgba(87, 184, 255, 0) 25%),
+        radial-gradient(circle at 85% 85%, rgba(60, 80, 224, 0.08), rgba(60, 80, 224, 0) 25%),
+        radial-gradient(circle at 50% 50%, rgba(4, 200, 200, 0.05), rgba(4, 200, 200, 0) 50%);
+    z-index: -2;
+}
+
+/* Звездное небо */
+@keyframes twinkle {
+    0% {
+        opacity: 0.2;
+    }
+    50% {
+        opacity: 0.8;
+    }
+    100% {
+        opacity: 0.2;
+    }
+}
+
+.animated-bg::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image:
+        radial-gradient(1px 1px at 30px 40px, white, transparent), radial-gradient(1px 1px at 70px 90px, white, transparent),
+        radial-gradient(1px 1px at 120px 50px, white, transparent), radial-gradient(1px 1px at 160px 160px, white, transparent),
+        radial-gradient(1px 1px at 200px 20px, white, transparent), radial-gradient(1px 1px at 240px 120px, white, transparent),
+        radial-gradient(1px 1px at 270px 90px, white, transparent), radial-gradient(1px 1px at 300px 200px, white, transparent),
+        radial-gradient(1px 1px at 350px 70px, white, transparent), radial-gradient(1px 1px at 400px 130px, white, transparent),
+        radial-gradient(1px 1px at 450px 30px, white, transparent), radial-gradient(1px 1px at 500px 100px, white, transparent),
+        radial-gradient(1px 1px at 550px 150px, white, transparent), radial-gradient(1px 1px at 600px 50px, white, transparent),
+        radial-gradient(1px 1px at 650px 120px, white, transparent), radial-gradient(1px 1px at 700px 80px, white, transparent);
+    background-repeat: repeat;
+    background-size: 700px 400px;
+    opacity: 0.2;
+    animation: twinkle 5s infinite alternate;
+    z-index: -1;
+}
+
+/* Базовые стили для приложения */
+#root {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Для плавного скролла */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Фиксируем минимальную высоту секций */
+section {
+    min-height: 50vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/* Добавляем отступ для первой секции, чтобы контент не уходил под шапку */
+section:first-of-type {
+    padding-top: calc(var(--header-height) + 20px);
+}
+
+/* Стилизация скроллбара */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--cursor-darker-bg);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--cursor-border);
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--cursor-primary);
+}
+
+/* Общие классы */
+.text-gradient {
+    background: var(--cursor-primary);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    color: transparent;
+    animation: gradient-shift 8s ease infinite;
+    background-size: 200% auto;
+}
+
+@keyframes gradient-shift {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.section-title {
+    @apply text-3xl font-bold mb-8 inline-block;
+    position: relative;
+}
+
+.section-title::after {
+    content: '';
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    width: 60%;
+    height: 3px;
+    background: var(--cursor-primary);
+    border-radius: 2px;
+    animation: pulse-border 2s ease-in-out infinite;
+}
+
+@keyframes pulse-border {
+    0% {
+        opacity: 0.7;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0.7;
+    }
+}
+
+.card {
+    background-color: var(--cursor-card-bg);
+    border: 1px solid var(--cursor-border);
+    border-radius: 12px;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.4);
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease,
+        border-color 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: var(--cursor-primary);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow:
+        0 8px 24px rgba(0, 0, 0, 0.3),
+        0 0 15px rgba(87, 184, 255, 0.3);
+    border-color: var(--cursor-primary);
+}
+
+.card:hover::before {
+    opacity: 1;
+}
+
+/* Анимации для появления элементов при скролле */
+.scroll-animation {
+    opacity: 0;
+    transform: translateY(30px);
+    transition:
+        opacity 0.8s ease,
+        transform 0.8s ease;
+}
+
+.scroll-animation.animate {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Задержки для элементов */
+.delay-100 {
+    transition-delay: 0.1s;
+}
+.delay-200 {
+    transition-delay: 0.2s;
+}
+.delay-300 {
+    transition-delay: 0.3s;
+}
+.delay-400 {
+    transition-delay: 0.4s;
+}
+.delay-500 {
+    transition-delay: 0.5s;
+}
+.delay-600 {
+    transition-delay: 0.6s;
+}
+.delay-700 {
+    transition-delay: 0.7s;
+}
+.delay-800 {
+    transition-delay: 0.8s;
+}
+
+/* Стилизация кнопок */
+.btn {
+    @apply px-4 py-2 rounded-md font-medium transition-all duration-300;
+    background: linear-gradient(90deg, var(--cursor-primary), var(--cursor-secondary));
+    color: white;
+    border: none;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    box-shadow: 0 2px 10px rgba(87, 184, 255, 0.3);
+}
+
+.btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background: linear-gradient(90deg, var(--cursor-secondary), var(--cursor-accent));
+    transition: width 0.3s ease;
+    z-index: -1;
+}
+
+.btn:hover {
+    box-shadow: 0 4px 15px rgba(87, 184, 255, 0.5);
+}
+
+.btn:hover::before {
+    width: 100%;
+}
+
+/* Глассморфизм */
+.glass {
+    background: rgba(23, 24, 25, 0.7);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(87, 184, 255, 0.1);
+}
+
+/* Неоновый эффект для элементов */
+.neon-text {
+    text-shadow: 0 0 8px rgba(87, 184, 255, 0.8);
+}
+
+.neon-border {
+    box-shadow: 0 0 8px rgba(87, 184, 255, 0.5);
+    border-color: var(--cursor-primary);
+}
+
+/* Стили для проектов */
+.project-card {
+    transition: transform 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.project-card:hover {
+    transform: translateY(-10px) scale(1.02);
+}
+
+.tech-badge {
+    @apply text-xs px-2 py-1 rounded-full;
+    background: rgba(87, 184, 255, 0.15);
+    color: var(--cursor-text);
+}
+
+/* Эффект свечения */
+.shadow-glow {
+    box-shadow:
+        0 0 10px rgba(87, 184, 255, 0.4),
+        0 0 20px rgba(87, 184, 255, 0.2);
+}
+
+/* Анимация для плавающих блобов */
+@keyframes blob {
+    0%,
+    100% {
+        border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+    }
+    25% {
+        border-radius: 30% 60% 70% 40% / 50% 60% 30% 60%;
+    }
+    50% {
+        border-radius: 50% 60% 30% 60% / 40% 30% 70% 60%;
+    }
+    75% {
+        border-radius: 40% 60% 70% 30% / 60% 40% 30% 70%;
+    }
+}
+
+.animate-blob {
+    animation: blob 10s infinite;
+}
+
+.animation-delay-2000 {
+    animation-delay: 2s;
+}
+
+.animation-delay-4000 {
+    animation-delay: 4s;
+}
+
+/* Новые анимированные элементы */
+@keyframes float {
+    0% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+.float {
+    animation: float 6s ease-in-out infinite;
+}
+
+.float-delay-1 {
+    animation-delay: 1s;
+}
+
+.float-delay-2 {
+    animation-delay: 2s;
+}
+
+/* Сияющие звезды */
+@keyframes pulse-glow {
+    0%,
+    100% {
+        opacity: 0.3;
+        transform: scale(1);
+    }
+    50% {
+        opacity: 0.8;
+        transform: scale(1.2);
+    }
+}
+
+.star {
+    width: 2px;
+    height: 2px;
+    border-radius: 50%;
+    background-color: white;
+    position: absolute;
+    animation: pulse-glow 3s infinite;
+}
+
+/* Цветные тени для элементов */
+.text-shadow-purple {
+    text-shadow: 0 0 10px rgba(87, 184, 255, 0.7);
+}
+
+.text-shadow-indigo {
+    text-shadow: 0 0 10px rgba(60, 80, 224, 0.7);
+}
+
+.text-shadow-accent {
+    text-shadow: 0 0 10px rgba(4, 200, 200, 0.7);
+}
+
+/* Стили для активной секции */
+.active-section {
+    position: relative;
+}
+
+.active-section::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(circle at center, rgba(87, 184, 255, 0.05), transparent 70%);
+    z-index: -1;
+}
+
+/* Стили для карточек в различных секциях */
+/* tech-card, experience-card, project-card, education-card */
