@@ -27,31 +27,13 @@ export const Parallax = () => {
             })
         }
 
-        const handleOrientation = (e) => {
-            if (!cardsRef.current) return
-            let beta = e.beta || 0
-            let gamma = e.gamma || 0
-
-            cardsRef.current.style.transform = `rotateX(${Math.floor(gamma)}deg) rotateY(${Math.floor(beta)}deg)`
-
-            imageRefs.current?.forEach((img) => {
-                img.style.transform = `translateX(${Math.floor(gamma)}px) translateY(${Math.floor(beta)}px)`
-            })
-
-            bgRefs.current?.forEach((bg) => {
-                bg.style.backgroundPosition = `${Math.floor(gamma) * 45}px ${Math.floor(-beta) * 0.45}px`
-            })
-        }
-
         imageRefs.current = document.querySelectorAll(imgId)
         bgRefs.current = document.querySelectorAll('[style*="background-image"]')
 
         window.addEventListener('mousemove', handleMouseMove)
-        window.addEventListener('deviceorientation', handleOrientation)
 
         return () => {
             window.removeEventListener('mousemove', handleMouseMove)
-            window.removeEventListener('deviceorientation', handleOrientation)
         }
     }, [])
 

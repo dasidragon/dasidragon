@@ -92,7 +92,7 @@ export const ProjectsSection = () => {
         <section id='projects' className='min-h-screen flex flex-col justify-center px-6 py-20 relative'>
             <div className='absolute inset-0 bg-gradient-to-b from-transparent via-[#000036]/10 to-transparent opacity-30 z-0'></div>
             <div className='max-w-4xl mx-auto w-full relative z-10'>
-                <h2 className='section-title text-shadow-accent scroll-animation'>Проекты</h2>
+                <h2 className='section-title text-shadow-accent scroll-animation'>Коммерческие проекты</h2>
 
                 <div
                     className='grid grid-cols-1 sm:grid-cols-2 gap-6 overflow-hidden pt-2'

@@ -87,7 +87,7 @@ export const HeroSection = () => {
                                 <img src={linkedinIcon} className="h-6 w-6 relative z-10" alt="LinkedIn" />
                             </a>
                             <a
-                                href="https://github.com/Dasihub"
+                                href="https://github.com/dasidragon"
                                 target="_blank"
                                 className="text-gray-400 hover:text-white transition-colors transform hover:scale-110 transition-transform duration-300 relative group"
                             >
