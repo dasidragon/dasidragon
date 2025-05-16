@@ -30,7 +30,7 @@ const projects = [
         description: 'UBR — специализированная система для продажи и управления электронными цифровыми подписями (ЭЦП).',
         technologies: ['Next.js', 'React', 'Axios', 'React-query', 'Redux', 'TypeScript'],
         image:  import.meta.env.BASE_URL + '/ubr.webp',
-        link: 'https://ubr.kg/p',
+        link: 'https://ubr.kg',
     },
     {
         title: 'Locali',
@@ -70,7 +70,7 @@ const projects = [
         link: 'https://avn.kg/',
     },
     {
-        title: 'битуриент Online',
+        title: 'Абитуриент Online',
         description: 'Портал для приема в вузы Кыргызской Республики граждан зарубежных стран.',
         technologies: ['React', 'Redux', 'Nodejs', 'Express.js', 'Postgresql'],
         image:  import.meta.env.BASE_URL + '/applicant.webp',
