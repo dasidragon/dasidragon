@@ -26,6 +26,13 @@ const projects = [
         link: 'https://bsmart.kg/',
     },
     {
+        title: 'Главный сайт Cloud Soft',
+        description: 'Главная страница компании BSmart.',
+        technologies: ['Next.js', 'React', 'Nginx'],
+        image:  import.meta.env.BASE_URL + '/cs.webp',
+        link: 'https://cs.kg/',
+    },
+    {
         title: 'UBR',
         description: 'UBR — специализированная система для продажи и управления электронными цифровыми подписями (ЭЦП).',
         technologies: ['Next.js', 'React', 'Axios', 'React-query', 'Redux', 'TypeScript'],

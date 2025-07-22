@@ -1,18 +1,4 @@
 import { useState, useEffect } from 'react'
-import {
-    frontendIcon,
-    backendIcon,
-    emailIcon,
-    arrowDownIcon,
-    devopsIcon,
-    githubIcon,
-    mobileIcon,
-    linkedinIcon,
-    telegramIcon,
-    locationIcon,
-    arrowRightIcon,
-    methodologiesIcon,
-} from './assets/icons'
 import { HeroSection } from '@/components/hero-section.jsx'
 import { TechStack } from '@/components/tech-stack.jsx'
 import { ExperienceSection } from '@/components/experience-section.jsx'
