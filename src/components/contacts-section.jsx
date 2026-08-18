@@ -29,11 +29,11 @@ export const ContactsSection = () => {
                             </div>
                             <div>
                                 <a
-                                    href='https://t.me/query_limba'
+                                    href='https://t.me/jogan_js'
                                     target='_blank'
                                     className='text-gray-400 hover:text-white transition-colors'
                                 >
-                                    @query_limba
+                                    @jogan_js
                                 </a>
                             </div>
                         </div>

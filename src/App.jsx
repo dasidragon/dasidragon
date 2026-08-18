@@ -1,18 +1,4 @@
 import { useState, useEffect } from 'react'
-import {
-    frontendIcon,
-    backendIcon,
-    emailIcon,
-    arrowDownIcon,
-    devopsIcon,
-    githubIcon,
-    mobileIcon,
-    linkedinIcon,
-    telegramIcon,
-    locationIcon,
-    arrowRightIcon,
-    methodologiesIcon,
-} from './assets/icons'
 import { HeroSection } from '@/components/hero-section.jsx'
 import { TechStack } from '@/components/tech-stack.jsx'
 import { ExperienceSection } from '@/components/experience-section.jsx'
@@ -198,7 +184,7 @@ const App = () => {
 
     return (
         <div className='bg-[#000000] text-white min-h-screen animated-bg'>
-            <Header menuOpen={menuOpen} />
+            <Header menuOpen={menuOpen} setMenuOpen={setMenuOpen} />
 
             <VerticalStepper activeSection={activeSection} />
             <MobileMenu menuOpen={menuOpen} setMenuOpen={setMenuOpen} />

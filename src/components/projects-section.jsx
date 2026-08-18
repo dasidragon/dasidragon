@@ -15,43 +15,50 @@ const projects = [
         description:
             'CRM BSmart — это современная CRM-система, разработанная для эффективного управления процессами покупки и продажи. Она обеспечивает полный контроль над сделками, позволяет вести учет клиентов и товаров, а также поддерживает интеграцию с ГНС для быстрой и безопасной авторизации операций.',
         technologies: ['React', 'React-query', 'Antd', 'React-router', 'Chart.js', 'Docker', 'Nginx', 'FSD', 'TypeScript', 'i18next'],
-        image: '/bsmart.webp',
+        image: import.meta.env.BASE_URL + '/bsmart.webp',
         link: 'https://apps.bsmart.kg',
     },
     {
         title: 'Лендинг сайт BSmart',
         description: 'Главная страница компании BSmart.',
         technologies: ['Next.js'],
-        image: '/bsmart_site.webp',
+        image: import.meta.env.BASE_URL + '/bsmart_site.webp',
         link: 'https://bsmart.kg/',
+    },
+    {
+        title: 'Главный сайт Cloud Soft',
+        description: 'Главная страница компании BSmart.',
+        technologies: ['Next.js', 'React', 'Nginx'],
+        image: import.meta.env.BASE_URL + '/cs.webp',
+        link: 'https://cs.kg/',
     },
     {
         title: 'UBR',
         description: 'UBR — специализированная система для продажи и управления электронными цифровыми подписями (ЭЦП).',
         technologies: ['Next.js', 'React', 'Axios', 'React-query', 'Redux', 'TypeScript'],
-        image: '/ubr.webp',
-        link: 'https://ubr.kg/p',
+        image: import.meta.env.BASE_URL + '/ubr.webp',
+        link: 'https://ubr.kg',
     },
     {
         title: 'Locali',
         description:
             'Locali — это универсальное решение, сочетающее в себе агрегатор доставки еды для пользователей и CRM-систему для управления процессами ресторанов, кафе и служб доставки. Платформа автоматизирует прием заказов, отслеживание доставок, управление меню и коммуникацию с клиентами.',
         technologies: ['React', 'React-query', 'Tailwindcss', 'Redux', 'React-leaflet', 'TypeScript'],
-        image: '/locali.webp',
+        image: import.meta.env.BASE_URL + '/locali.webp',
         link: 'https://loca-li.com/',
     },
     {
         title: 'Локали - Доставка еды',
         description: 'Мобильное приложение Локали - Доставка еды для Android и IOS',
         technologies: ['React-native', 'TypeScript'],
-        image: '/locali_app.webp',
+        image: import.meta.env.BASE_URL + '/locali_app.webp',
         link: 'https://apps.apple.com/kg/app/%D0%BB%D0%BE%D0%BA%D0%B0%D0%BB%D0%B8-%D0%B4%D0%BE%D1%81%D1%82%D0%B0%D0%B2%D0%BA%D0%B0-%D0%B5%D0%B4%D1%8B/id1625790808',
     },
     {
         title: 'Сайт G&GApp',
         description: 'G&GGApp - главный сайт компании G&GTeam.',
         technologies: ['Vanilla js'],
-        image: '/ggapp.webp',
+        image: import.meta.env.BASE_URL + '/ggapp.webp',
         link: 'https://ggapp.pro/',
     },
     {
@@ -59,28 +66,28 @@ const projects = [
         description:
             'BeEasy- это программное решение, предназначенное для удобного взаимодействия с сотрудниками, заказчиком и эффективного сотрудничества. Мы предоставляем широкий набор инструментов, включая возможность проведения проектирования на заданную проектную среду, группы, функции управления задачами, аналитику и управление проектами, а также связь в режиме реального времени.',
         technologies: ['React', 'Redux', 'React-router', 'Nodejs', 'Express.js', 'Nginx', 'Postgresql', 'Emotion', 'TypeScript'],
-        image: '/beeasy.webp',
+        image: import.meta.env.BASE_URL + '/beeasy.webp',
         link: '/https://beeasy.kg/',
     },
     {
         title: 'Сайт AVN',
         description: 'Главный сайт компании AVN.',
         technologies: ['React', 'Redux', 'Nodejs'],
-        image: '/avn.webp',
+        image: import.meta.env.BASE_URL + '/avn.webp',
         link: 'https://avn.kg/',
     },
     {
-        title: 'битуриент Online',
+        title: 'Абитуриент Online',
         description: 'Портал для приема в вузы Кыргызской Республики граждан зарубежных стран.',
         technologies: ['React', 'Redux', 'Nodejs', 'Express.js', 'Postgresql'],
-        image: '/applicant.webp',
+        image: import.meta.env.BASE_URL + '/applicant.webp',
         link: 'https://edugate.edu.gov.kg/',
     },
     {
         title: 'Umut',
         description: 'Система Umut',
         technologies: ['React', 'React-router-dom'],
-        image: '/umut.webp',
+        image: import.meta.env.BASE_URL + '/umut.webp',
         link: 'https://umut.edu.gov.kg/',
     },
 ]
@@ -92,7 +99,7 @@ export const ProjectsSection = () => {
         <section id='projects' className='min-h-screen flex flex-col justify-center px-6 py-20 relative'>
             <div className='absolute inset-0 bg-gradient-to-b from-transparent via-[#000036]/10 to-transparent opacity-30 z-0'></div>
             <div className='max-w-4xl mx-auto w-full relative z-10'>
-                <h2 className='section-title text-shadow-accent scroll-animation'>Проекты</h2>
+                <h2 className='section-title text-shadow-accent scroll-animation'>Коммерческие проекты</h2>
 
                 <div
                     className='grid grid-cols-1 sm:grid-cols-2 gap-6 overflow-hidden pt-2'

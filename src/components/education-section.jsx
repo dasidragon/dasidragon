@@ -5,7 +5,7 @@ export const EducationSection = () => {
             <div className='max-w-4xl mx-auto w-full relative z-10'>
                 <h2 className='section-title text-shadow-indigo scroll-animation'>Образование</h2>
 
-                <div className='card p-6 scroll-animation delay-200'>
+                <div className='card p-6 scroll-animation delay-200 mt-[2rem]'>
                     <div className='flex flex-col md:flex-row md:justify-between md:items-start mb-4'>
                         <div>
                             <h3 className='text-xl font-bold text-white'>КГЮА IT-колледж</h3>

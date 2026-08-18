@@ -1,4 +1,4 @@
-import { frontendIcon, backendIcon, devopsIcon, mobileIcon, methodologiesIcon } from '../assets/icons'
+import { backendIcon, devopsIcon, frontendIcon, methodologiesIcon, mobileIcon } from '../assets/icons'
 
 const technologies = {
     frontend: [
@@ -33,30 +33,10 @@ const technologies = {
         'Electron.js',
         'React-Spring',
         'Chart.js',
-    ],
-    backend: [
-        'Node.js',
-        'Express',
-        'Nest.js',
-        'PostgreSQL',
-        'MongoDB',
-        'MySQL',
-        'Redis',
         'GraphQL',
-        'JWT',
-        'REST API',
-        'TypeORM',
-        'Sequelize',
-        'Prisma',
-        'Socket.IO',
-        'Swagger',
-        'Fastify',
-        'MVC',
-        'Microservices',
-        'Docker',
-        'RabbitMQ',
-        'SOLID',
+        'Solid',
     ],
+    backend: ['Node.js', 'Express', 'Nest.js', 'PostgreSQL', 'JWT', 'REST API', 'TypeORM', 'Socket.IO', 'Swagger', 'Docker', 'C#', '.Net', 'APS.NET', 'NHibernate'],
     mobile: ['React-Native (Expo / CLI)'],
     devops: ['Git', 'GitLab', 'CI/CD', 'Docker', 'Nginx', 'Precommit', 'Husky', 'Lint-stage', 'commitlint'],
     methodologies: ['Waterfall', 'Agile', 'Scrum', 'Kanban'],
