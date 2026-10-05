@@ -1,7 +1,7 @@
 <h1 align="center">Привет, я Дастан 👋</h1>
 
 <p align="center">
-  <strong>Frontend Engineer</strong> c 4+ годами опыта.<br/>
+  <strong>Full Stack</strong> c 4+ годами опыта.<br/>
   Пишу код, улучшаю интерфейсы и ускоряю продукты.
 </p>
 
@@ -121,6 +121,6 @@
 ## 🔗 Контакты
 
 - 📬 Email: [dasihub02@gmail.com](mailto:dasihub02@gmail.com)
-- 💬 Telegram: [@query_limba](https://t.me/query_limba)
+- 💬 Telegram: [@jogan_js](https://t.me/jogan_js)
 - 💼 LinkedIn: [dastan-nurbekov](https://www.linkedin.com/in/dastan-nurbekov)
 

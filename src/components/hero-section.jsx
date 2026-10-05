@@ -15,7 +15,7 @@ export const HeroSection = () => {
                     <div className='animate-fadeIn'>
                         <span className='text-sm font-medium text-gray-400 mb-2 block tracking-wider'>Привет, меня зовут</span>
                         <h1 className='text-5xl md:text-6xl font-bold mb-4 text-white'>Дастан Нурбеков</h1>
-                        <h2 className='text-2xl md:text-3xl font-medium mb-6 text-white'>Middle Front-end Engineer</h2>
+                        <h2 className='text-2xl md:text-3xl font-medium mb-6 text-white'>Full-Stack Engineer</h2>
 
                         <div className='flex items-center mb-6 text-gray-400'>
                             <img src={locationIcon} className='w-5 h-5 mr-2 text-[#3C50E0]' alt='Location' />
