@@ -121,6 +121,6 @@
 ## 🔗 Контакты
 
 - 📬 Email: [dasihub02@gmail.com](mailto:dasihub02@gmail.com)
-- 💬 Telegram: [@jogan_js](https://t.me/jogan_js)
+- 💬 Telegram: [@query_limba](https://t.me/query_limba)
 - 💼 LinkedIn: [dastan-nurbekov](https://www.linkedin.com/in/dastan-nurbekov)
 
