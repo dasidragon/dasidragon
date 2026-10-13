@@ -26,7 +26,7 @@ export const Header = ({ menuOpen, setMenuOpen }) => {
                 </a>
 
                 <a
-                    href={import.meta.env.BASE_URL + '/Дастан_Нурбеков_Frontend_developer.pdf'}
+                    href={import.meta.env.BASE_URL + '/Нурбеков_Дастан_резюме.pdf'}
                     target='_blank'
                     className='flex items-center gap-2 bg-[#3C50E0] text-white px-3 py-1.5 rounded-md hover:bg-[#3C50E0]/80 transition-colors shadow-lg'
                     download
