@@ -1,7 +1,7 @@
 const experiences = [
     {
         company: 'BI Innovations',
-        position: 'Full-Stack Developer',
+        position: 'Senior Frontend Developer',
         period: 'Сентябрь 2024 - настоящее время',
         type: 'Продуктовая компания',
         location: 'Казахстан, Астана (Remote)',

@@ -1,7 +1,7 @@
 <h1 align="center">Привет, я Дастан 👋</h1>
 
 <p align="center">
-  <strong>Full Stack</strong> c 4+ годами опыта.<br/>
+  <strong>Senior Front-End developer</strong> c 4+ годами опыта.<br/>
   Пишу код, улучшаю интерфейсы и ускоряю продукты.
 </p>
 
@@ -89,7 +89,7 @@
 
 ## 💼 Опыт
 
-### **BI Innovations** — *Front-end Developer*
+### **BI Innovations** — *Senior Front-end Developer*
 
 📍 Казахстан, Remote · Сент 2024 — Авг 2026  
 Разработка клиентской части CRM-системы, улучшение UX/UI, архитектуры и производительности.
